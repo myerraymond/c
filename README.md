@@ -7,3 +7,5 @@ A collection of c++ code i have done.
 
 - Calculating Dates, a simple calculator which uses a couple of simple alorithms to determine what date it would be from any date. The code also invovles, odd dates (28 day months & gap years).
 
+- Average Score, average score is a simple scoring program, which reads in the number of judges and then reads in the score that they have given. From this it finds the average of all the scores provided.
+
