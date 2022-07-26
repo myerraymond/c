@@ -9,3 +9,5 @@ A collection of c++ code i have done.
 
 - Average Score, average score is a simple scoring program, which reads in the number of judges and then reads in the score that they have given. From this it finds the average of all the scores provided.
 
+- Fibonacci Sequence, a simple program which displays the fibonacci sequence. To extend it more simply change the for loop (i < x).
+
