@@ -13,3 +13,6 @@ A collection of c++ code i have done.
 
 - 2diceroll, rolling one die 6000 times and documenting the results. Rolling 2 dice 6000 times adding them together and documenting the results.
 
+-binary_to_decimal, converting binary number to decimal.
+
+-decimal_to_binary, converting decimal number to binary.
