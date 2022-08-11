@@ -11,3 +11,5 @@ A collection of c++ code i have done.
 
 - Fibonacci Sequence, a simple program which displays the fibonacci sequence. To extend it more simply change the for loop (i < x).
 
+- 2diceroll, rolling one die 6000 times and documenting the results. Rolling 2 dice 6000 times adding them together and documenting the results.
+
