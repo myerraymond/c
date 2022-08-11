@@ -1,0 +1,84 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int roll_one(int, int);
+void roll_dice(int);
+void generate_random(int, int);
+
+int main()
+{
+  generate_random(2, 12);
+  roll_dice(2);
+}
+
+
+//Generates random number between min and max and counts how many times each number appears
+void generate_random(int min, int max)
+{
+  cout << endl << "Generating 6000 random number between " << min << " and " << max << "..." << endl;
+
+  int total_rolls = 6000;
+
+  int counts[max+1];
+  for (int i = 0; i < max+1; i++)
+    counts[i] = 0;
+
+  srand(102);
+
+  for (int i = 0; i < total_rolls; i++)
+  {
+    int result = roll_one(min, max);
+    if (result >= min && result <= max)
+      counts[result]++;
+  }
+
+  for (int i = min; i <= max; i++)
+  {
+    cout << "Number " << i << " was generated " << counts[i] << " times." << endl;
+  }
+
+}
+
+
+//Rolls given number of dice 6000 times and counts how many times each number occurs
+void roll_dice(int num_dice)
+{
+  cout << endl << "Rolling " << num_dice << " dice 6000 times..." << endl;
+  int dice_min = 1;
+  int dice_max = 6;
+  int min_val = dice_min * num_dice;
+  int max_val = dice_max * num_dice;
+  int total_rolls = 6000;
+
+  int roll_count[max_val + 1];
+  for (int i = 0; i < max_val + 1; i++)
+    roll_count[i] = 0;
+
+  srand(102);
+
+  for (int i = 0; i < total_rolls; i++)
+  {
+    int result = 0;
+
+    for (int j = 0; j < num_dice; j++)
+    {
+      result = result + roll_one(dice_min, dice_max);
+    }
+
+    if (result >= min_val && result <= max_val)
+      roll_count[result]++;
+  }
+
+  for (int i = min_val; i <= max_val; i++)
+  {
+    cout << i << " was rolled " << roll_count[i] << " times." << endl;
+  }
+}
+
+
+//Generates Random number between min & max values
+int roll_one(int min, int max)
+{
+  return rand() % (max - min + 1) + min;
+}
